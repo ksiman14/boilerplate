@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'development',
   entry: ['./client/index.js'],
   output: {
     path: __dirname,
@@ -15,7 +16,10 @@ module.exports = {
           presets: ['@babel/preset-react'],
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
-  mode: 'development',
 };
