@@ -5,8 +5,8 @@
   "main": "./server/start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
-    "start-dev": "webpack -w & nodemon server.js"
+    "start": "JWT=somekeyhere node server",
+    "start-dev": "JWT=somekey webpack -w & nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,8 +20,10 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
